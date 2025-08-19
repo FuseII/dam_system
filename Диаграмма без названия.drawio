@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 YaBrowser/25.6.0.0 Safari/537.36" version="28.1.0">
+  <diagram name="Страница — 1" id="EDfUCFU40FV2XMGREJmg">
+    <mxGraphModel dx="1378" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dBg9ZKJxlE9WUBT50pYM-1" value="Классифицировать / кластеризовать информацию в таблицах, установить взаимосвязи (анализ статического состояния системы).&lt;div&gt;Автоматическое проставление тегов, получение смсыла содержимого каждой таблицы.&amp;nbsp;&lt;br&gt;&lt;div&gt;Технологии: AI, ML, NLP&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="50" width="430" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dBg9ZKJxlE9WUBT50pYM-2" value="Отслеживать изменения в базе данных (изменения, информации, добавление, удаление, перемещение) в целом (анализ динамики системы).&lt;div&gt;Технологии: PostgreSQL tsvector + ALTER TABLE , RabbitMQ, Celery&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="220" width="430" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="dBg9ZKJxlE9WUBT50pYM-3" value="Комплексная автоматическая аналитика с выводами и рекомендациями (комплексное понимание системы, аналитические суждения, предсказания).&lt;div&gt;&lt;br&gt;&lt;div&gt;Технологии:&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="557.5" y="400" width="440" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="dBg9ZKJxlE9WUBT50pYM-4" value="Проверка на корректность информации.Поиск опечаток, анализ выбросов и аномальных значений (box plot, учитывать бизнес-логику).&lt;div&gt;Техологии:symspellpy&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="400" width="440" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="dBg9ZKJxlE9WUBT50pYM-5" value="Анализ и работа с геометриями объектов.&lt;div&gt;Кластеризация по геометрии, отслеживание изменений.&lt;/div&gt;&lt;div&gt;Проверка геометрии объектов на валидность.&lt;/div&gt;&lt;div&gt;Поиск прямоугольников, треугольников, кругов, овалов.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;Технологии: PostGIS&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="50" width="435" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="aSMmigzo_EB3Km2S0uTX-1" value="Чат-бот разбирающий текст запроса пользователя, отправляющий аргументы на нужные микросервисы&lt;div&gt;(функциональные блоки) и формирующий результаты работы.&lt;div&gt;Техологии:NLP&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="625" width="440" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="aSMmigzo_EB3Km2S0uTX-2" value="Общий перечень технологий:&lt;div&gt;&lt;br&gt;&lt;div&gt;ML, NLP,&amp;nbsp;&lt;/div&gt;&lt;div&gt;Кластеризация (K-MEANS, DBSCAN, в том числе и древовидная),&amp;nbsp;&lt;/div&gt;&lt;div&gt;Классификация(multilabel по тегам, по тексту),&amp;nbsp;&lt;/div&gt;&lt;div&gt;Извлечение именованных сущностей,&lt;/div&gt;&lt;div&gt;Методы снижения размерности(UMAP, t-SNE, PAC)&lt;/div&gt;&lt;div&gt;Celery, RabbitMQ&lt;/div&gt;&lt;div&gt;FastAPI&amp;nbsp;&lt;/div&gt;&lt;div&gt;PostrgreSQL, Redis&lt;/div&gt;&lt;/div&gt;&lt;div&gt;symspellpy, nltk&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="585" width="390" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="aSMmigzo_EB3Km2S0uTX-3" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=-0.005;entryY=0.464;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="dBg9ZKJxlE9WUBT50pYM-1" target="dBg9ZKJxlE9WUBT50pYM-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="320" as="sourcePoint" />
+            <mxPoint x="420" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aSMmigzo_EB3Km2S0uTX-4" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="dBg9ZKJxlE9WUBT50pYM-4" target="dBg9ZKJxlE9WUBT50pYM-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="320" as="sourcePoint" />
+            <mxPoint x="420" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

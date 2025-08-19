@@ -1,0 +1,349 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 YaBrowser/25.6.0.0 Safari/537.36" version="28.1.0">
+  <diagram name="Страница — 1" id="6sciitYQYHLInWqhVKaN">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-1" value="Сервис по извлечению первичной информации о таблицах, получение тегов" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="160" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-2" value="Объединение&amp;nbsp; колонок в одно текстовое поле, сбор тегов и метаинформации&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="1">
+          <mxGeometry x="520" y="30" width="190" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-3" value="json файл" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="630" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-4" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-1" target="MDc2SPzWWvA0TRq4mOcv-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="400" as="sourcePoint" />
+            <mxPoint x="530" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-5" value="PostgreSQL" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="140" y="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-6" value="1C" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="140" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-7" value="Сводный перечень терминов Генплана" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="140" y="280" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.588;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-5" target="MDc2SPzWWvA0TRq4mOcv-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="400" as="sourcePoint" />
+            <mxPoint x="440" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-9" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-6" target="MDc2SPzWWvA0TRq4mOcv-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="400" as="sourcePoint" />
+            <mxPoint x="440" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-10" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-7" target="MDc2SPzWWvA0TRq4mOcv-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="300" as="sourcePoint" />
+            <mxPoint x="470" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-11" value="Сервис для извлечения эмбедингов - векторизованных представлений предложений" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-12" value="json файл" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="130" y="440" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-13" value="json файл" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="640" y="440" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-14" value="Применяем различные анализаторы из моделей (НС, трансформеров), производим усреднение значений&amp;nbsp; векторов.и т.п.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="1">
+          <mxGeometry x="520" y="280" width="270" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-12" target="MDc2SPzWWvA0TRq4mOcv-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="570" as="sourcePoint" />
+            <mxPoint x="460" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-11" target="MDc2SPzWWvA0TRq4mOcv-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="480" as="sourcePoint" />
+            <mxPoint x="630" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-19" value="Сервис для визуализации результатов кластеризации" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1020" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-20" value="json файл" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1020" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-21" value="Веб-презентация с аналитическими выводами" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="665" y="997.5" width="125" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-22" value="&lt;div&gt;Снижение размерности многомерного вектора при помощи алгоритмов UMAP, t-SNE, PCA с различными параметрами для визуальной кластеризации.&lt;/div&gt;&lt;div&gt;Построение графов, визуализация статистики&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="1">
+          <mxGeometry x="510" y="810" width="370" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="1060" as="sourcePoint" />
+            <mxPoint x="360" y="1060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-24" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-19" target="MDc2SPzWWvA0TRq4mOcv-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="1070" as="sourcePoint" />
+            <mxPoint x="710" y="1070" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-25" value="Сервис для кластеризации" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="700" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-26" value="json файл" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="130" y="700" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-27" value="json файл" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="640" y="700" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-28" value="Применяем алгоритмы для кластеризации&lt;div&gt;&amp;nbsp;K-MEANS, DBSCAN&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="1">
+          <mxGeometry x="520" y="540" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-29" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-26" target="MDc2SPzWWvA0TRq4mOcv-25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="830" as="sourcePoint" />
+            <mxPoint x="460" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-30" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-25" target="MDc2SPzWWvA0TRq4mOcv-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="740" as="sourcePoint" />
+            <mxPoint x="630" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-31" value="Сервис для автоматического определения тегов для таблиц и кластеров, получения смысла хранящейся в них информации." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="1330" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-32" value="json файл" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1280" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-33" value="Расширенная веб-презентация с аналитическими выводами" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1505" y="1312.5" width="125" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-34" value="&lt;div&gt;С помощью готовой модели трансформера применить подход zero-shot для мультилейблевой классификации по тегам и ключевым словам.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="1">
+          <mxGeometry x="1350" y="1120" width="370" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-35" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-32" target="MDc2SPzWWvA0TRq4mOcv-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1090" y="1370" as="sourcePoint" />
+            <mxPoint x="1200" y="1370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-36" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-31" target="MDc2SPzWWvA0TRq4mOcv-33">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1400" y="1380" as="sourcePoint" />
+            <mxPoint x="1550" y="1380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-44" value="Теги и ключевые слова/словосочетания." style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1420" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-45" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" target="MDc2SPzWWvA0TRq4mOcv-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1070" y="1465" as="sourcePoint" />
+            <mxPoint x="1450" y="1540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-46" value="Сервис полнотекстового языкового поиска" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1730" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-47" value="Текстовая строка для поиска" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1680" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-48" value="Ранжированная выдача наименования таблиц и строк" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="645" y="1712.5" width="125" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-49" value="&lt;div&gt;Нахождение строк в таблицах. Позволяет не брать во внимание названия колонок, а искать по объединённому текстовому полю.&lt;/div&gt;&lt;div&gt;ALTER TABLE tsvector + Celery + RabbitMQ&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="1">
+          <mxGeometry x="500" y="1570" width="340" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-50" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-47" target="MDc2SPzWWvA0TRq4mOcv-46">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="1770" as="sourcePoint" />
+            <mxPoint x="340" y="1770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-51" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-46" target="MDc2SPzWWvA0TRq4mOcv-48">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="1780" as="sourcePoint" />
+            <mxPoint x="690" y="1780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-52" value="PostgreSQL" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1810" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-53" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-52" target="MDc2SPzWWvA0TRq4mOcv-46">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="1990" as="sourcePoint" />
+            <mxPoint x="590" y="1940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-54" value="Сервис для отслеживания изменений в таблицах" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="2060" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-56" value="Аналитический вывод в виде презентации." style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="655" y="2040" width="127.5" height="127.5" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-57" value="&lt;div&gt;Определение перемещения/изменения/дублирования/удаления объектов&lt;/div&gt;&lt;div&gt;в таблицах с течением времени&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="1">
+          <mxGeometry x="510" y="1890" width="370" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-59" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-54" target="MDc2SPzWWvA0TRq4mOcv-56">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="2110" as="sourcePoint" />
+            <mxPoint x="700" y="2110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-60" value="PostgreSQL" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="85" y="2048.75" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-61" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-60" target="MDc2SPzWWvA0TRq4mOcv-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="2320" as="sourcePoint" />
+            <mxPoint x="600" y="2270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-62" value="Сервис для классификации объектов" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="2370" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-63" value="Отранжированный список рекомендаций" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="630" y="2350" width="127.5" height="127.5" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-64" value="&lt;div&gt;Определяет в какую таблицу пользователю следует занести имеющиеся данные.&lt;/div&gt;&lt;div&gt;Находит таблицы с похожей информацией.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="1">
+          <mxGeometry x="485" y="2200" width="370" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-65" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-62" target="MDc2SPzWWvA0TRq4mOcv-63">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="525" y="2420" as="sourcePoint" />
+            <mxPoint x="675" y="2420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-66" value="Текстовая строка" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="60" y="2358.75" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-67" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-66" target="MDc2SPzWWvA0TRq4mOcv-62">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="525" y="2630" as="sourcePoint" />
+            <mxPoint x="575" y="2580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-68" value="Сервис для определения опечаток в таблицах или строках ввода." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="297" y="2700" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-69" value="Нахождение опечаток с выводом возможных вариантов исправлений" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="611.25" y="2676.25" width="137.5" height="137.5" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-70" value="&lt;div&gt;Используем модуль symspellpy и пополняемый словарь&lt;/div&gt;&lt;div&gt;для сканирования таблиц, проверки добавляемых строк&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="1">
+          <mxGeometry x="457" y="2530" width="370" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-71" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-68" target="MDc2SPzWWvA0TRq4mOcv-69">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="497" y="2750" as="sourcePoint" />
+            <mxPoint x="647" y="2750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-72" value="Текстовая строка" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="32" y="2688.75" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="MDc2SPzWWvA0TRq4mOcv-73" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MDc2SPzWWvA0TRq4mOcv-72" target="MDc2SPzWWvA0TRq4mOcv-68">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="497" y="2960" as="sourcePoint" />
+            <mxPoint x="547" y="2910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fP58lNzlPZCEG26Z-TL--6" value="Сервис для работы с геометрией объектов." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="3020" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fP58lNzlPZCEG26Z-TL--7" value="Выдача объектов и заключения по ним." style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="600" y="3000" width="127.5" height="127.5" as="geometry" />
+        </mxCell>
+        <mxCell id="fP58lNzlPZCEG26Z-TL--8" value="&lt;div&gt;Анализ геометрии объектов на валидность.&lt;/div&gt;&lt;div&gt;Поиск прямоугольников, треугольников, кругов, овалов.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="1">
+          <mxGeometry x="455" y="2850" width="370" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="fP58lNzlPZCEG26Z-TL--9" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="fP58lNzlPZCEG26Z-TL--6" target="fP58lNzlPZCEG26Z-TL--7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="495" y="3070" as="sourcePoint" />
+            <mxPoint x="645" y="3070" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fP58lNzlPZCEG26Z-TL--10" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" target="fP58lNzlPZCEG26Z-TL--6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="3064" as="sourcePoint" />
+            <mxPoint x="545" y="3230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fP58lNzlPZCEG26Z-TL--11" value="PostgreSQL" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="30" y="3008.75" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-19" value="Сервис извлечения именованных сущностей" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="395" y="-140" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-20" value="Json" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="645" y="-160" width="127.5" height="127.5" as="geometry" />
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-21" value="&lt;div&gt;Извлечение из текстов таблиц&amp;nbsp; именованных сущностей: персон, организаций, зданий, доменов. Необходимо для получения тегов и понимания хранящейся в таблицах информации и дальнейшего посика по ключевым объектам(сущностям).&lt;br&gt;&lt;div&gt;&lt;div&gt;Техологии:NLP&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="1">
+          <mxGeometry x="540" y="-360" width="560" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-22" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XCeU2IJ8z6m31evMdWsv-19" target="XCeU2IJ8z6m31evMdWsv-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="595" y="-90" as="sourcePoint" />
+            <mxPoint x="745" y="-90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-23" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" target="XCeU2IJ8z6m31evMdWsv-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="-96" as="sourcePoint" />
+            <mxPoint x="645" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-24" value="PostgreSQL&lt;div&gt;(текст из таблиц)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="130" y="-151.25" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.107;entryY=0;entryDx=0;entryDy=0;dashed=1;entryPerimeter=0;" edge="1" parent="1" source="XCeU2IJ8z6m31evMdWsv-20" target="MDc2SPzWWvA0TRq4mOcv-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="150" as="sourcePoint" />
+            <mxPoint x="350" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-27" value="Текст из д&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;окументов&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="130" y="-320" width="125" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-28" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1.009;exitY=0.673;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="XCeU2IJ8z6m31evMdWsv-27" target="XCeU2IJ8z6m31evMdWsv-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="-200" as="sourcePoint" />
+            <mxPoint x="415" y="-199" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-29" value="Чат-бот&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="225" y="3350" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-30" value="Выдача результатов работы." style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="530" y="3330" width="127.5" height="127.5" as="geometry" />
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-31" value="&lt;div&gt;Чат-бот разбирающий текст запроса пользователя, отправляющий аргументы на нужные микросервисы&lt;div&gt;(функциональные блоки) и формирующий результаты работы.&lt;div&gt;Техологии:NLP&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="1">
+          <mxGeometry x="385" y="3170" width="475" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XCeU2IJ8z6m31evMdWsv-29" target="XCeU2IJ8z6m31evMdWsv-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="425" y="3400" as="sourcePoint" />
+            <mxPoint x="575" y="3400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-33" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" target="XCeU2IJ8z6m31evMdWsv-29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="3394" as="sourcePoint" />
+            <mxPoint x="475" y="3560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XCeU2IJ8z6m31evMdWsv-34" value="Текстовая строка" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="3338.75" width="110" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
