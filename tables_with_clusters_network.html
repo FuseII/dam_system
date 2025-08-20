@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #FFFFFF;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#f8fd00", "font": {"color": "black"}, "id": "Cluster_4", "label": "Cluster 4", "shape": "diamond", "size": 133.2291259447423}, {"color": "#ff0000", "font": {"color": "black"}, "id": "Cluster_0", "label": "Cluster 0", "shape": "diamond", "size": 125.39936203984453}, {"color": "#78ff00", "font": {"color": "black"}, "id": "Cluster_6", "label": "Cluster 6", "shape": "diamond", "size": 248.14310387355118}, {"color": "#ff009a", "font": {"color": "black"}, "id": "Cluster_21", "label": "Cluster 21", "shape": "diamond", "size": 175.85505395068975}, {"color": "#b9ff00", "font": {"color": "black"}, "id": "Cluster_5", "label": "Cluster 5", "shape": "diamond", "size": 174.4276354251241}, {"color": "#0069ff", "font": {"color": "black"}, "id": "Cluster_14", "label": "Cluster 14", "shape": "diamond", "size": 111.46748404803978}, {"color": "#ffc300", "font": {"color": "black"}, "id": "Cluster_3", "label": "Cluster 3", "shape": "diamond", "size": 96.43650760992955}, {"color": "#ff00db", "font": {"color": "black"}, "id": "Cluster_20", "label": "Cluster 20", "shape": "diamond", "size": 90.27735042633894}, {"color": "#00eaff", "font": {"color": "black"}, "id": "Cluster_12", "label": "Cluster 12", "shape": "diamond", "size": 63.047601064592456}, {"color": "#6000ff", "font": {"color": "black"}, "id": "Cluster_17", "label": "Cluster 17", "shape": "diamond", "size": 112.69427669584644}, {"color": "#a100ff", "font": {"color": "black"}, "id": "Cluster_18", "label": "Cluster 18", "shape": "diamond", "size": 88.45903006477066}, {"color": "#00aaff", "font": {"color": "black"}, "id": "Cluster_13", "label": "Cluster 13", "shape": "diamond", "size": 80.15609770940699}, {"color": "#00ff51", "font": {"color": "black"}, "id": "Cluster_9", "label": "Cluster 9", "shape": "diamond", "size": 100.87120500916008}, {"color": "#00ffd3", "font": {"color": "black"}, "id": "Cluster_11", "label": "Cluster 11", "shape": "diamond", "size": 118.4271928232701}, {"color": "#0028ff", "font": {"color": "black"}, "id": "Cluster_15", "label": "Cluster 15", "shape": "diamond", "size": 133.88427838995884}, {"color": "#ff4100", "font": {"color": "black"}, "id": "Cluster_1", "label": "Cluster 1", "shape": "diamond", "size": 81.54753215150045}, {"color": "#ff0059", "font": {"color": "black"}, "id": "Cluster_22", "label": "Cluster 22", "shape": "diamond", "size": 60.20797289396148}, {"color": "#00ff92", "font": {"color": "black"}, "id": "Cluster_10", "label": "Cluster 10", "shape": "diamond", "size": 107.58717395675006}, {"color": "#ff0018", "font": {"color": "black"}, "id": "Cluster_23", "label": "Cluster 23", "shape": "diamond", "size": 51.72040216394301}, {"color": "#37ff00", "font": {"color": "black"}, "id": "Cluster_7", "label": "Cluster 7", "shape": "diamond", "size": 226.99118925632334}, {"color": "#e200ff", "font": {"color": "black"}, "id": "Cluster_19", "label": "Cluster 19", "shape": "diamond", "size": 172.33687939614086}, {"color": "#ff8200", "font": {"color": "black"}, "id": "Cluster_2", "label": "Cluster 2", "shape": "diamond", "size": 230.10866998007702}, {"color": "#00ff10", "font": {"color": "black"}, "id": "Cluster_8", "label": "Cluster 8", "shape": "diamond", "size": 98.74208829065749}, {"color": "#1f00ff", "font": {"color": "black"}, "id": "Cluster_16", "label": "Cluster 16", "shape": "diamond", "size": 181.1767093199344}, {"color": "#f8fd00", "font": {"color": "black"}, "id": "_46379._47923", "label": "_46379._47923", "shape": "dot", "size": 20, "title": "Clusters: 4\nTable name: _46379._47923\nService: 440"}, {"color": "#ff0000", "font": {"color": "black"}, "id": "_46379._58710", "label": "_46379._58710", "shape": "dot", "size": 20, "title": "Clusters: 0 6\nTable name: _46379._58710\nService: 440"}, {"color": "#f8fd00", "font": {"color": "black"}, "id": "_46379._47925", "label": "_46379._47925", "shape": "dot", "size": 20, "title": "Clusters: 4\nTable name: _46379._47925\nService: 440"}, {"color": "#ff0000", "font": {"color": "black"}, "id": "_46379._47928", "label": "_46379._47928", "shape": "dot", "size": 20, "title": "Clusters: 0\nTable name: _46379._47928\nService: 440"}, {"color": "#ff009a", "font": {"color": "black"}, "id": "_46379._54935", "label": "_46379._54935", "shape": "dot", "size": 20, "title": "Clusters: 0 5 6 21\nTable name: _46379._54935\nService: 440"}, {"color": "#78ff00", "font": {"color": "black"}, "id": "_46379._54936", "label": "_46379._54936", "shape": "dot", "size": 20, "title": "Clusters: 0 4 6 21\nTable name: _46379._54936\nService: 440"}, {"color": "#b9ff00", "font": {"color": "black"}, "id": "_46379._54937", "label": "_46379._54937", "shape": "dot", "size": 20, "title": "Clusters: 0 5 21\nTable name: _46379._54937\nService: 440"}, {"color": "#ff009a", "font": {"color": "black"}, "id": "_46379._54938", "label": "_46379._54938", "shape": "dot", "size": 20, "title": "Clusters: 0 21\nTable name: _46379._54938\nService: 440"}, {"color": "#0069ff", "font": {"color": "black"}, "id": "_46379._51704", "label": "_46379._51704", "shape": "dot", "size": 20, "title": "Clusters: 3 14 21\nTable name: _46379._51704\nService: 440"}, {"color": "#ff009a", "font": {"color": "black"}, "id": "_46379._51701", "label": "_46379._51701", "shape": "dot", "size": 20, "title": "Clusters: 0 3 12 14 17 20 21\nTable name: _46379._51701\nService: 440"}, {"color": "#ff009a", "font": {"color": "black"}, "id": "_46379._51700", "label": "_46379._51700", "shape": "dot", "size": 20, "title": "Clusters: 0 6 21\nTable name: _46379._51700\nService: 440"}, {"color": "#ff009a", "font": {"color": "black"}, "id": "_46379._51702", "label": "_46379._51702", "shape": "dot", "size": 20, "title": "Clusters: 13 14 18 21\nTable name: _46379._51702\nService: 440"}, {"color": "#00ff51", "font": {"color": "black"}, "id": "_46379._51703", "label": "_46379._51703", "shape": "dot", "size": 20, "title": "Clusters: 0 1 4 9 11 14 15 17 21\nTable name: _46379._51703\nService: 440"}, {"color": "#0069ff", "font": {"color": "black"}, "id": "_46379._51706", "label": "_46379._51706", "shape": "dot", "size": 20, "title": "Clusters: 0 14 17 21\nTable name: _46379._51706\nService: 440"}, {"color": "#00aaff", "font": {"color": "black"}, "id": "_46379._51705", "label": "_46379._51705", "shape": "dot", "size": 20, "title": "Clusters: 12 13 14 21 22\nTable name: _46379._51705\nService: 440"}, {"color": "#ff009a", "font": {"color": "black"}, "id": "_46379._47926", "label": "_46379._47926", "shape": "dot", "size": 20, "title": "Clusters: 0 5 6 21\nTable name: _46379._47926\nService: 440"}, {"color": "#ff009a", "font": {"color": "black"}, "id": "_46379._46398", "label": "_46379._46398", "shape": "dot", "size": 20, "title": "Clusters: 0 1 4 5 6 12 14 18 21\nTable name: _46379._46398\nService: 440"}, {"color": "#ff009a", "font": {"color": "black"}, "id": "_46379._47924", "label": "_46379._47924", "shape": "dot", "size": 20, "title": "Clusters: 0 1 4 5 6 21\nTable name: _46379._47924\nService: 440"}, {"color": "#ff0000", "font": {"color": "black"}, "id": "_46379._51321", "label": "_46379._51321", "shape": "dot", "size": 20, "title": "Clusters: 0 5 21\nTable name: _46379._51321\nService: 440"}, {"color": "#a100ff", "font": {"color": "black"}, "id": "_46379._51707", "label": "_46379._51707", "shape": "dot", "size": 20, "title": "Clusters: 3 10 12 14 18 20 23\nTable name: _46379._51707\nService: 440"}, {"color": "#37ff00", "font": {"color": "black"}, "id": "_46379._47876", "label": "_46379._47876", "shape": "dot", "size": 20, "title": "Clusters: 1 2 7 8 16 19\nTable name: _46379._47876\nService: 440"}]);
+                  edges = new vis.DataSet([{"from": "_46379._47923", "title": "Strength: 3", "to": "Cluster_4", "value": 3}, {"from": "_46379._47925", "title": "Strength: 3", "to": "Cluster_4", "value": 3}, {"from": "_46379._54936", "title": "Strength: 4", "to": "Cluster_4", "value": 4}, {"from": "_46379._51703", "title": "Strength: 5", "to": "Cluster_4", "value": 5}, {"from": "_46379._46398", "title": "Strength: 4", "to": "Cluster_4", "value": 4}, {"from": "_46379._47924", "title": "Strength: 4", "to": "Cluster_4", "value": 4}, {"from": "_46379._58710", "title": "Strength: 3", "to": "Cluster_0", "value": 3}, {"from": "_46379._47928", "title": "Strength: 3", "to": "Cluster_0", "value": 3}, {"from": "_46379._54935", "title": "Strength: 4", "to": "Cluster_0", "value": 4}, {"from": "_46379._54936", "title": "Strength: 4", "to": "Cluster_0", "value": 4}, {"from": "_46379._54937", "title": "Strength: 4", "to": "Cluster_0", "value": 4}, {"from": "_46379._54938", "title": "Strength: 4", "to": "Cluster_0", "value": 4}, {"from": "_46379._51701", "title": "Strength: 5", "to": "Cluster_0", "value": 5}, {"from": "_46379._51700", "title": "Strength: 4", "to": "Cluster_0", "value": 4}, {"from": "_46379._51703", "title": "Strength: 5", "to": "Cluster_0", "value": 5}, {"from": "_46379._51706", "title": "Strength: 5", "to": "Cluster_0", "value": 5}, {"from": "_46379._47926", "title": "Strength: 4", "to": "Cluster_0", "value": 4}, {"from": "_46379._46398", "title": "Strength: 4", "to": "Cluster_0", "value": 4}, {"from": "_46379._47924", "title": "Strength: 4", "to": "Cluster_0", "value": 4}, {"from": "_46379._51321", "title": "Strength: 4", "to": "Cluster_0", "value": 4}, {"from": "_46379._58710", "title": "Strength: 3", "to": "Cluster_6", "value": 3}, {"from": "_46379._54935", "title": "Strength: 4", "to": "Cluster_6", "value": 4}, {"from": "_46379._54936", "title": "Strength: 4", "to": "Cluster_6", "value": 4}, {"from": "_46379._51700", "title": "Strength: 4", "to": "Cluster_6", "value": 4}, {"from": "_46379._47926", "title": "Strength: 4", "to": "Cluster_6", "value": 4}, {"from": "_46379._46398", "title": "Strength: 4", "to": "Cluster_6", "value": 4}, {"from": "_46379._47924", "title": "Strength: 4", "to": "Cluster_6", "value": 4}, {"from": "_46379._54935", "title": "Strength: 4", "to": "Cluster_21", "value": 4}, {"from": "_46379._54936", "title": "Strength: 4", "to": "Cluster_21", "value": 4}, {"from": "_46379._54937", "title": "Strength: 4", "to": "Cluster_21", "value": 4}, {"from": "_46379._54938", "title": "Strength: 4", "to": "Cluster_21", "value": 4}, {"from": "_46379._51704", "title": "Strength: 5", "to": "Cluster_21", "value": 5}, {"from": "_46379._51701", "title": "Strength: 5", "to": "Cluster_21", "value": 5}, {"from": "_46379._51700", "title": "Strength: 4", "to": "Cluster_21", "value": 4}, {"from": "_46379._51702", "title": "Strength: 5", "to": "Cluster_21", "value": 5}, {"from": "_46379._51703", "title": "Strength: 5", "to": "Cluster_21", "value": 5}, {"from": "_46379._51706", "title": "Strength: 5", "to": "Cluster_21", "value": 5}, {"from": "_46379._51705", "title": "Strength: 5", "to": "Cluster_21", "value": 5}, {"from": "_46379._47926", "title": "Strength: 4", "to": "Cluster_21", "value": 4}, {"from": "_46379._46398", "title": "Strength: 4", "to": "Cluster_21", "value": 4}, {"from": "_46379._47924", "title": "Strength: 4", "to": "Cluster_21", "value": 4}, {"from": "_46379._51321", "title": "Strength: 4", "to": "Cluster_21", "value": 4}, {"from": "_46379._54935", "title": "Strength: 4", "to": "Cluster_5", "value": 4}, {"from": "_46379._54937", "title": "Strength: 4", "to": "Cluster_5", "value": 4}, {"from": "_46379._47926", "title": "Strength: 4", "to": "Cluster_5", "value": 4}, {"from": "_46379._46398", "title": "Strength: 4", "to": "Cluster_5", "value": 4}, {"from": "_46379._47924", "title": "Strength: 4", "to": "Cluster_5", "value": 4}, {"from": "_46379._51321", "title": "Strength: 4", "to": "Cluster_5", "value": 4}, {"from": "_46379._51704", "title": "Strength: 5", "to": "Cluster_14", "value": 5}, {"from": "_46379._51701", "title": "Strength: 5", "to": "Cluster_14", "value": 5}, {"from": "_46379._51702", "title": "Strength: 5", "to": "Cluster_14", "value": 5}, {"from": "_46379._51703", "title": "Strength: 5", "to": "Cluster_14", "value": 5}, {"from": "_46379._51706", "title": "Strength: 5", "to": "Cluster_14", "value": 5}, {"from": "_46379._51705", "title": "Strength: 5", "to": "Cluster_14", "value": 5}, {"from": "_46379._46398", "title": "Strength: 4", "to": "Cluster_14", "value": 4}, {"from": "_46379._51707", "title": "Strength: 5", "to": "Cluster_14", "value": 5}, {"from": "_46379._51704", "title": "Strength: 5", "to": "Cluster_3", "value": 5}, {"from": "_46379._51701", "title": "Strength: 5", "to": "Cluster_3", "value": 5}, {"from": "_46379._51707", "title": "Strength: 5", "to": "Cluster_3", "value": 5}, {"from": "_46379._51701", "title": "Strength: 5", "to": "Cluster_20", "value": 5}, {"from": "_46379._51707", "title": "Strength: 5", "to": "Cluster_20", "value": 5}, {"from": "_46379._51701", "title": "Strength: 5", "to": "Cluster_12", "value": 5}, {"from": "_46379._51705", "title": "Strength: 5", "to": "Cluster_12", "value": 5}, {"from": "_46379._46398", "title": "Strength: 4", "to": "Cluster_12", "value": 4}, {"from": "_46379._51707", "title": "Strength: 5", "to": "Cluster_12", "value": 5}, {"from": "_46379._51701", "title": "Strength: 5", "to": "Cluster_17", "value": 5}, {"from": "_46379._51703", "title": "Strength: 5", "to": "Cluster_17", "value": 5}, {"from": "_46379._51706", "title": "Strength: 5", "to": "Cluster_17", "value": 5}, {"from": "_46379._51702", "title": "Strength: 5", "to": "Cluster_18", "value": 5}, {"from": "_46379._46398", "title": "Strength: 4", "to": "Cluster_18", "value": 4}, {"from": "_46379._51707", "title": "Strength: 5", "to": "Cluster_18", "value": 5}, {"from": "_46379._51702", "title": "Strength: 5", "to": "Cluster_13", "value": 5}, {"from": "_46379._51705", "title": "Strength: 5", "to": "Cluster_13", "value": 5}, {"from": "_46379._51703", "title": "Strength: 5", "to": "Cluster_9", "value": 5}, {"from": "_46379._51703", "title": "Strength: 5", "to": "Cluster_11", "value": 5}, {"from": "_46379._51703", "title": "Strength: 5", "to": "Cluster_15", "value": 5}, {"from": "_46379._51703", "title": "Strength: 5", "to": "Cluster_1", "value": 5}, {"from": "_46379._46398", "title": "Strength: 4", "to": "Cluster_1", "value": 4}, {"from": "_46379._47924", "title": "Strength: 4", "to": "Cluster_1", "value": 4}, {"from": "_46379._47876", "title": "Strength: 4", "to": "Cluster_1", "value": 4}, {"from": "_46379._51705", "title": "Strength: 5", "to": "Cluster_22", "value": 5}, {"from": "_46379._51707", "title": "Strength: 5", "to": "Cluster_10", "value": 5}, {"from": "_46379._51707", "title": "Strength: 5", "to": "Cluster_23", "value": 5}, {"from": "_46379._47876", "title": "Strength: 4", "to": "Cluster_7", "value": 4}, {"from": "_46379._47876", "title": "Strength: 4", "to": "Cluster_19", "value": 4}, {"from": "_46379._47876", "title": "Strength: 4", "to": "Cluster_2", "value": 4}, {"from": "_46379._47876", "title": "Strength: 4", "to": "Cluster_8", "value": 4}, {"from": "_46379._47876", "title": "Strength: 4", "to": "Cluster_16", "value": 4}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"physics": {"forceAtlas2Based": {"gravitationalConstant": -50, "centralGravity": 0.01, "springLength": 200, "springConstant": 0.08}, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
